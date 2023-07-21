@@ -35,7 +35,7 @@ export default function ContactPage() {
             <TwitchIcon size={20} className="mx-auto px-0" onClick={() => openInNewTab("https://www.twitch.tv/roriginals")}/>
           </Button>
         </div>
-        <div className="flex w-full max-w-screen-sm justify-center gap-12 mx-auto lg:flex-col">
+        <div className="flex flex-col w-full max-w-screen-md justify-center gap-12 mx-auto md:flex-row">
           <div className="w-full">
             <p className="text-2xl">Contact Me</p>
             <p className="text-slate-700">Have something to say? We are here to help. Fill up the form or send email or call phone.</p>

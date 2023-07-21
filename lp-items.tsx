@@ -1,3 +1,38 @@
+import { BriefcaseIcon, FolderGit2Icon, LayoutGridIcon, NewspaperIcon, NfcIcon, User2Icon } from "lucide-react"
+
+export const linkItems = [
+  {
+    title: "Home",
+    icon: <LayoutGridIcon className="my-auto" size={15} />,
+    path: "/",
+  },
+  {
+    title: "Projects",
+    icon: <FolderGit2Icon size={15} className="my-auto" />,
+    path: "/projects",
+  },
+  {
+    title: "Blog",
+    icon: <NewspaperIcon className="my-auto" size={15} />,
+    path: "/blog",
+  },
+  {
+    title: "CV",
+    icon: <BriefcaseIcon className="my-auto" size={15} />,
+    path: "/cv",
+  },
+  {
+    title: "About",
+    icon: <User2Icon className="my-auto" size={15} />,
+    path: "/about",
+  },
+  {
+    title: "Contact",
+    icon: <NfcIcon className="my-auto" size={15} />,
+    path: "/contact",
+  },
+]
+
 export const LP_GRID_ITEMS = [
   {
     title: "Next.js",

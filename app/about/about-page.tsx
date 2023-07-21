@@ -23,7 +23,7 @@ export default function AboutPage() {
         </p>
       </div>
       <div className="mx-auto mt-10 w-full">
-        <div className="relative mx-auto h-[500px] max-w-screen-md">
+        <div className="relative mx-auto h-[300px] sm:h-[400px] md:h-[550px] lg:h-[500px] max-w-screen-md">
           <Image className="mx-auto rounded-xl -z-50" src={"/assets/desk-setup.JPG"} fill alt="desk-setup" />
         </div>
         <p className="mt-2 text-center uppercase text-slate-500">{"What's on my desk"}</p>
