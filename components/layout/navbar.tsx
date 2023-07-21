@@ -7,13 +7,14 @@ import {
   NewspaperIcon,
   NfcIcon,
   TwitchIcon,
-  User2Icon
+  User2Icon,
 } from "lucide-react"
 // import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 // import { Avatar, AvatarFallback, AvatarImage } from "components/ui/avatar"
 import { Button } from "components/ui/button"
+import { openInNewTab } from "lib/utils"
 
 const linkItems = [
   {
@@ -50,7 +51,7 @@ const linkItems = [
 
 export default function Navbar() {
   return (
-    <div className="sticky top-0 w-full px-4 py-2 opacity-95 backdrop-blur-xl">
+    <div className="sticky top-0 w-full bg-white px-4 py-2 opacity-95 backdrop-blur-xl dark:bg-slate-900">
       <div className="container flex justify-between">
         <div className="flex gap-4">
           <p className="my-auto text-xl font-bold">
@@ -60,7 +61,7 @@ export default function Navbar() {
             {linkItems.map((item, index) => (
               <React.Fragment key={index}>
                 <Link href={item.path}>
-                  <div className="flex gap-2 hover:bg-slate-100 px-2 py-1 rounded-md">
+                  <div className="flex gap-2 rounded-md px-2 py-1 hover:bg-slate-100">
                     {item.icon}
                     <p className="my-auto text-slate-700">{item.title}</p>
                   </div>
@@ -72,9 +73,9 @@ export default function Navbar() {
         <div className="flex gap-2">
           <div className="my-auto rounded-full">
             <Button
-              variant={"default"}
+              variant={"outline"}
               className="px-3"
-              onClick={() => window.open("https://www.twitch.tv/roriginals", "_blank", "noreferrer")}
+              onClick={() => openInNewTab("https://www.twitch.tv/roriginals")}
             >
               {/* <GithubIcon size={20} /> */}
               {/* <TwitterIcon size={20}/> */}
@@ -82,11 +83,7 @@ export default function Navbar() {
             </Button>
           </div>
           <div className="my-auto rounded-full">
-            <Button
-              variant={"default"}
-              className="px-3"
-              onClick={() => window.open("https://github.com/rrios4", "_blank", "noreferrer")}
-            >
+            <Button variant={"outline"} className="px-3" onClick={() => openInNewTab("https://github.com/rrios4")}>
               <GithubIcon size={18} />
             </Button>
           </div>
