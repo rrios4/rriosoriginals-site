@@ -51,7 +51,7 @@ const linkItems = [
 
 export default function Navbar() {
   return (
-    <div className="sticky top-0 w-full bg-white px-4 py-2 opacity-95 backdrop-blur-xl dark:bg-slate-900">
+    <div className="sticky top-0 w-full bg-white px-4 py-2 opacity-90 backdrop-blur-xl dark:bg-slate-900">
       <div className="container flex justify-between">
         <div className="flex gap-4">
           <p className="my-auto text-xl font-bold">

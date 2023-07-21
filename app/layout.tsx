@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <div className="container">{children}</div>
+        <div className="container my-8">{children}</div>
       </body>
     </html>
   )

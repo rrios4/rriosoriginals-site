@@ -10,9 +10,9 @@ import { openInNewTab } from "lib/utils"
 export default function ContactPage() {
   return (
     <div className="mx-auto max-w-screen-xl">
-      <div className="flex w-full flex-col justify-center mt-12">
+      <div className="flex w-full flex-col justify-center mt-8">
         <p className="text-center text-5xl font-bold">Contact</p>
-        <p className="mx-auto mt-4 max-w-xl text-center text-slate-600">
+        <p className="mx-auto mt-4 max-w-xl text-center text-slate-700">
           Reach out to me by filling out the form below or by following me through my social media platforms to stay
           updated.
         </p>
@@ -35,10 +35,10 @@ export default function ContactPage() {
             <TwitchIcon size={20} className="mx-auto px-0" onClick={() => openInNewTab("https://www.twitch.tv/roriginals")}/>
           </Button>
         </div>
-        <div className="flex w-full max-w-screen-md justify-center gap-8 mx-auto">
+        <div className="flex w-full max-w-screen-sm justify-center gap-12 mx-auto lg:flex-col">
           <div className="w-full">
             <p className="text-2xl">Contact Me</p>
-            <p className="">Have something to say? We are here to help. Fill up the form or send email or call phone.</p>
+            <p className="text-slate-700">Have something to say? We are here to help. Fill up the form or send email or call phone.</p>
           </div>
           <div className="flex flex-col gap-4 w-full">
             <Input placeholder="Full Name"/>
