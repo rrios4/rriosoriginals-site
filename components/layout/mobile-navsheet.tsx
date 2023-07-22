@@ -1,18 +1,16 @@
+"use client"
 import { MenuIcon } from "lucide-react"
+import Link from "next/link"
 import React from "react"
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "components/ui/sheet"
 import { linkItems } from "lp-items"
-import Link from "next/link"
-import { Button } from "components/ui/button"
 
 export default function MobileNavSheet() {
   return (
     <>
       <Sheet>
-        <SheetTrigger className="block lg:hidden">
-          <Button variant={"outline"} className="px-3">
+        <SheetTrigger className="block px-3 border border-slate-200 rounded-lg lg:hidden">
             <MenuIcon size={18} />
-          </Button>
         </SheetTrigger>
         <SheetContent className="w-full">
           <SheetHeader>

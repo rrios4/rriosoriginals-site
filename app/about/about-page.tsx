@@ -23,8 +23,8 @@ export default function AboutPage() {
         </p>
       </div>
       <div className="mx-auto mt-10 w-full">
-        <div className="relative mx-auto h-[300px] sm:h-[400px] md:h-[550px] lg:h-[500px] max-w-screen-md">
-          <Image className="mx-auto rounded-xl -z-50" src={"/assets/desk-setup.JPG"} fill alt="desk-setup" />
+        <div className="relative mx-auto h-[300px] max-w-screen-md sm:h-[400px] md:h-[550px] lg:h-[500px]">
+          <Image className="-z-50 mx-auto rounded-xl" src={"/assets/desk-setup.JPG"} fill alt="desk-setup" />
         </div>
         <p className="mt-2 text-center uppercase text-slate-500">{"What's on my desk"}</p>
       </div>
@@ -45,9 +45,9 @@ export default function AboutPage() {
             }
           </p>
         </div>
-        <div className="flex w-full justify-center mt-6 mb-10">
-          <div className="relative w-[200px] h-[200px]">
-            <Image className="rounded-full -z-50" src={"/assets/profile-me.JPG"} fill alt="my-profile-pic" />
+        <div className="mb-10 mt-6 flex w-full justify-center">
+          <div className="relative h-[200px] w-[200px]">
+            <Image className="-z-50 rounded-full" src={"/assets/profile-me.JPG"} fill alt="my-profile-pic" />
           </div>
         </div>
       </div>

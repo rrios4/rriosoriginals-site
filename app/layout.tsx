@@ -1,10 +1,10 @@
+import { Metadata } from "next"
 import Navbar from "components/layout/navbar"
 import "../styles/tailwind.css"
-import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Home",
-  description: "Welcome to Next.js Enterprise read app",
+  description: "Welcome to Next.js Enterprise ready app",
 }
 
 export default function RootLayout({

@@ -1,3 +1,4 @@
+'use client'
 import Head from "next/head"
 import { Button } from "components/ui/button"
 import { LP_GRID_ITEMS } from "../lp-items"
