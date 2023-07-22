@@ -11,12 +11,12 @@ import MobileNavSheet from "./mobile-navsheet"
 
 export default function Navbar() {
   return (
-    <div className="sticky top-0 w-full bg-white py-2 opacity-95 backdrop-blur-xl dark:bg-slate-900">
+    <div className="sticky top-0 z-50 w-full bg-white py-2 opacity-95 backdrop-blur-xl dark:bg-slate-900">
       <div className="container flex justify-between">
         <div className="flex gap-4">
           <MobileNavSheet/>
           <p className="my-auto text-xl font-bold">
-            Rogelio<span className="font-[300] text-slate-500">Rios</span>
+            Rogelio<span className="font-[300] text-slate-500">Originals</span>
           </p>
           <div className="hidden lg:my-auto lg:flex lg:gap-2">
             {linkItems.map((item, index) => (

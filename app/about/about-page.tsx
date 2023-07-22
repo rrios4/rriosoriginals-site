@@ -1,4 +1,6 @@
 "use client"
+import DefaultPageHeader from "components/page-header"
+import { AspectRatio } from "components/ui/aspect-ratio"
 import Image from "next/image"
 import React from "react"
 
@@ -16,19 +18,25 @@ export default function AboutPage() {
           </div>
         </div>
       </div> */}
-      <div className="mt-8 flex w-full flex-col justify-center">
-        <p className="text-center text-3xl lg:text-5xl font-bold">About</p>
-        <p className="mx-auto mt-4 max-w-xl text-center text-slate-700">
-          {"Learn a little more about me on my intestest, what I'm working on, and a bit about my story here."}
-        </p>
-      </div>
+      <DefaultPageHeader
+        title="About"
+        description="Learn a little more about me on my intestest, what I'm working on, and a bit about my story here."
+      />
       <div className="mx-auto mt-10 w-full">
-        <div className="relative mx-auto h-[300px] max-w-screen-md sm:h-[400px] md:h-[550px] lg:h-[500px]">
-          <Image quality={75} className="-z-50 mx-auto rounded-xl" src={"/assets/desk-setup.JPG"} fill alt="desk-setup" />
+        <div className="relative mx-auto max-w-screen-md ">
+          <AspectRatio ratio={16 / 10}>
+            <Image
+              quality={75}
+              className="-z-50 mx-auto rounded-xl"
+              src={"/assets/desk-setup.JPG"}
+              fill
+              alt="desk-setup"
+            />
+          </AspectRatio>
         </div>
         <p className="mt-2 text-center uppercase text-slate-500">{"What's on my desk"}</p>
       </div>
-      <div className="mt-8 w-full">
+      <div className="mt-8 w-full pb-4">
         <div className="mx-auto max-w-screen-sm">
           <h1 className="mb-4 text-xl font-bold">Story</h1>
           <p className="mb-4">
@@ -45,11 +53,11 @@ export default function AboutPage() {
             }
           </p>
         </div>
-        <div className="mb-10 mt-6 flex w-full justify-center">
+        {/* <div className="mb-10 mt-6 flex w-full justify-center">
           <div className="relative h-[200px] w-[200px]">
             <Image className="-z-50 rounded-full" src={"/assets/profile-me.JPG"} fill alt="my-profile-pic" />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

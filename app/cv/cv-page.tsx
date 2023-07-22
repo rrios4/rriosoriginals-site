@@ -1,8 +1,9 @@
 'use client'
+import DefaultPageHeader from 'components/page-header'
 import React from 'react'
 
 export default function CvPage() {
   return (
-    <div>CV Page</div>
+    <DefaultPageHeader title='CV' description='Formal outline of my experience as a software engineer, my education, projects, and other accomplishments.'/>
   )
 }

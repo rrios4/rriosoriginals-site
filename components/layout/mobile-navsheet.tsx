@@ -9,7 +9,7 @@ export default function MobileNavSheet() {
   return (
     <div className="block lg:hidden">
       <Sheet>
-        <SheetTrigger className="px-3 border border-slate-200 rounded-lg">
+        <SheetTrigger className="px-3 border border-slate-200 rounded-lg h-full">
             <MenuIcon size={18} />
         </SheetTrigger>
         <SheetContent className="w-full">
