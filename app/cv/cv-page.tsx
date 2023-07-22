@@ -3,6 +3,6 @@ import React from 'react'
 
 export default function CvPage() {
   return (
-    <div>Cv Page</div>
+    <div>CV Page</div>
   )
 }

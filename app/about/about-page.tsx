@@ -17,14 +17,14 @@ export default function AboutPage() {
         </div>
       </div> */}
       <div className="mt-8 flex w-full flex-col justify-center">
-        <p className="text-center text-5xl font-bold">About</p>
+        <p className="text-center text-3xl lg:text-5xl font-bold">About</p>
         <p className="mx-auto mt-4 max-w-xl text-center text-slate-700">
           {"Learn a little more about me on my intestest, what I'm working on, and a bit about my story here."}
         </p>
       </div>
       <div className="mx-auto mt-10 w-full">
         <div className="relative mx-auto h-[300px] max-w-screen-md sm:h-[400px] md:h-[550px] lg:h-[500px]">
-          <Image className="-z-50 mx-auto rounded-xl" src={"/assets/desk-setup.JPG"} fill alt="desk-setup" />
+          <Image quality={75} className="-z-50 mx-auto rounded-xl" src={"/assets/desk-setup.JPG"} fill alt="desk-setup" />
         </div>
         <p className="mt-2 text-center uppercase text-slate-500">{"What's on my desk"}</p>
       </div>

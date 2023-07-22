@@ -1,3 +1,4 @@
+'use client'
 import { BriefcaseIcon, FolderGit2Icon, LayoutGridIcon, NewspaperIcon, NfcIcon, User2Icon } from "lucide-react"
 
 export const linkItems = [

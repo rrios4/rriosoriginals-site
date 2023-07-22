@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import { MenuIcon } from "lucide-react"
 import Link from "next/link"
 import React from "react"
@@ -7,9 +7,9 @@ import { linkItems } from "lp-items"
 
 export default function MobileNavSheet() {
   return (
-    <>
+    <div className="block lg:hidden">
       <Sheet>
-        <SheetTrigger className="block px-3 border border-slate-200 rounded-lg lg:hidden">
+        <SheetTrigger className="px-3 border border-slate-200 rounded-lg">
             <MenuIcon size={18} />
         </SheetTrigger>
         <SheetContent className="w-full">
@@ -34,6 +34,6 @@ export default function MobileNavSheet() {
           </div>
         </SheetContent>
       </Sheet>
-    </>
+    </div>
   )
 }

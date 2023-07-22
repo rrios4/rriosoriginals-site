@@ -11,7 +11,7 @@ export default function ContactPage() {
   return (
     <div className="mx-auto max-w-screen-xl">
       <div className="flex w-full flex-col justify-center mt-8">
-        <p className="text-center text-5xl font-bold">Contact</p>
+        <p className="text-center text-3xl lg:text-5xl font-bold">Contact</p>
         <p className="mx-auto mt-4 max-w-xl text-center text-slate-700">
           Reach out to me by filling out the form below or by following me through my social media platforms to stay
           updated.
