@@ -1,0 +1,24 @@
+---
+import Container from "@components/container.astro";
+import Cta from "@components/cta.astro";
+import Features from "@components/features.astro";
+import HeroInfo from "@components/hero-info.astro";
+import Hero from "@components/hero.astro";
+import Logos from "@components/logos.astro";
+import ProjectGrid from "@components/project-grid.astro";
+import Layout from "@layouts/Layout.astro";
+import { projectItems } from "../../yourData";
+import BlogHighlight from "@components/blog-highlight.astro";
+---
+
+<Layout title="">
+  <Container>
+    <HeroInfo/>
+    <BlogHighlight/>
+    <ProjectGrid projectData={projectItems}/>
+    <!-- <Hero />
+    <Features />
+    <Logos />
+    <Cta /> -->
+  </Container>
+</Layout>
