@@ -3,7 +3,7 @@ export const projectItems = [
         title: "The Roofing App",
         subtitle: 'Admin dashboard to help small roofing businesses.',
         description:
-          "Admin dashboard built for performance 🚀 to help small roofing businesses to manage important information!",
+          "Admin dashboard built for performance 🚀 to help small roofing businesses to manage important information.",
         start_date: "Dec 2022",
         end_date: "Present",
         img_url: "/assets/posters/roofingv2-webapp-poster.png",
