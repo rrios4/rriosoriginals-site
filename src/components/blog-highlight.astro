@@ -1,13 +1,74 @@
 ---
-import SectionHeader from './section-header.astro';
-type Props = {
+import SectionHeader from "./section-header.astro";
+import { getCollection } from "astro:content";
+import { Picture } from "@astrojs/image/components";
+type Props = {};
 
-}
+const {} = Astro.props;
 
-const {} = Astro.props
+// Filter blog entries with 'draft: false' & date before current date
+const publishedBlogEntries = await getCollection("blog", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
 
+// Sort content entries by publication date
+const sortedBlogEntries = publishedBlogEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+});
+
+const sliceBlogEntries = sortedBlogEntries.slice(0,3)
 ---
-<div class="container py-4">
-    <SectionHeader title='Blog' subtitle='The latest to my blog'/>
-    
+
+<div class="py-4">
+  <SectionHeader title="Blog" subtitle="The latest to my blog" />
+  <ul class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {
+      sliceBlogEntries.map((blogEntry, index) => (
+        <li class="bg-slate-100 p-10 rounded-2xl ">
+          <a href={`/blog/${blogEntry.slug}`} class="">
+            <div class="grid grid-flow-row grid-cols-1 gap-4 transition ease-in-out duration-500 hover:scale-105">
+              <Picture
+                src={blogEntry.data.image.src}
+                alt={blogEntry.data.image.alt}
+                sizes="(max-width: 800px) 100vw, 800px"
+                widths={[200, 400, 800]}
+                aspectRatio="16:9"
+                background="#ffffff"
+                fit="cover"
+                position="center"
+                loading={index <= 2 ? "eager" : "lazy"}
+                decoding={index <= 2 ? "sync" : "async"}
+                class="w-full rounded-md"
+              />
+              <div>
+                <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+                  {blogEntry.data.category}
+                </span>
+
+                <h2 class="text-2xl font-semibold leading-snug tracking-tight mt-1 ">
+                  {blogEntry.data.title}
+                </h2>
+
+                <div class="flex gap-2 mt-3 text-sm">
+                  <span class="text-gray-400">{blogEntry.data.author}</span>
+                  <span class="text-gray-400">• </span>
+                  <time
+                    class="text-gray-400"
+                    datetime={blogEntry.data.publishDate.toISOString()}>
+                    {blogEntry.data.publishDate.toDateString()}
+                  </time>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <div class="grid grid-flow-row grid-cols-3"></div>
+  <div class="flex justify-end py-6 w-full">
+    <a href="/blog">
+        <button class="py-2 px-4 bg-black rounded-full text-slate-100 text-sm">See all posts</button>
+    </a>
+  </div>
 </div>

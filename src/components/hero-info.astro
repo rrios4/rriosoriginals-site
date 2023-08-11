@@ -1,15 +1,17 @@
 ---
 import heroMe from "../assets/hero-me.png";
 import { Picture } from "@astrojs/image/components";
+import SectionHeader from "./section-header.astro";
 type Props = {};
 
 const {} = Astro.props;
 const borderStyle = "border-[4px] border-green-800 border-opacity-50";
 ---
 
-<main class="container my-4">
-  <div class="flex w-full gap-6 h-[500px]">
-    <div class={`w-[70%] bg-slate-100 p-10 rounded-2xl`}>
+<main class="py-4 mx-auto w-full">
+  <!-- <SectionHeader title="Intro" subtitle="Brief introduction to me"/> -->
+  <div class="grid grid-flow-row grid-cols-1 lg:grid-cols-2 w-full gap-6">
+    <div class={`bg-slate-100 p-10 rounded-2xl h-[550px]`}>
         <h1 class="text-[40px] font-semibold">
           Hello, I’m Rogelio, a software engineer with 3 years of experience
         </h1>
@@ -21,30 +23,8 @@ const borderStyle = "border-[4px] border-green-800 border-opacity-50";
           >Contact me</button
         >
     </div>
-    <div class={`w-[50%] bg-[#FBFBFB] rounded-2xl overflow-hidden`}>
-      <!-- <Picture
-            src={heroMe}
-            widths={[1000]}
-            height={500}
-            sizes="(max-width: 1200px) 100vw, 1200px"
-            fit='contain'
-            /> -->
+    <div class={`bg-[#FBFBFB] rounded-2xl overflow-hidden h-[550px]`}>
       <img src="/hero-me.png" class="object-cover h-full" />
     </div>
-    <!-- <div class="flex flex-col w-[35%] gap-4">
-            <div class="flex justify-between w-full bg-[#FBFBFB] rounded-2xl p-6">
-                <p>Name:</p>
-                <p>Rogelio Rios</p>
-            </div>
-            <div class="w-full bg-[#FBFBFB] rounded-2xl p-6 h-full">
-                <div class="flex justify-between">
-                    <p>Based in:</p>
-                    <p>Houston, TX</p>
-                </div>
-                <div class="overflow-hidden h-full pt-6">
-                    <iframe class="w-full h-[300px] rounded-xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221544.00617557947!2d-95.56609680287877!3d29.817373586974036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b8b4488d8501%3A0xca0d02def365053b!2sHouston%2C%20TX!5e0!3m2!1sen!2sus!4v1691525868388!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div> -->
   </div>
 </main>
