@@ -1,7 +1,6 @@
 ---
-import heroMe from "../assets/hero-me.png";
-import { Picture } from "@astrojs/image/components";
-import SectionHeader from "./section-header.astro";
+import LucideIcon from "./ui/icons/lucide-icon.astro";
+import { Linkedin, Instagram, Twitter, Youtube, Twitch } from "lucide";
 type Props = {};
 
 const {} = Astro.props;
@@ -11,7 +10,9 @@ const borderStyle = "border-[4px] border-green-800 border-opacity-50";
 <main class="py-4 mx-auto w-full">
   <!-- <SectionHeader title="Intro" subtitle="Brief introduction to me"/> -->
   <div class="grid grid-flow-row grid-cols-1 lg:grid-cols-2 w-full gap-6">
-    <div class={`bg-slate-100 p-4 lg:p-10 rounded-2xl h-[550px]`}>
+    <div
+      class={`flex flex-col justify-between bg-slate-100 p-4 lg:p-10 rounded-2xl h-[550px]`}>
+      <div>
         <h1 class="text-[32px] sm:text-[40px] font-semibold">
           Hello, I’m Rogelio, a software engineer with 3 years of experience
         </h1>
@@ -19,12 +20,66 @@ const borderStyle = "border-[4px] border-green-800 border-opacity-50";
           I care a lot about design for positive impact, and enjoy creating
           user-centric, delightful, and human experiences.
         </p>
-        <button class="py-3 px-8 bg-black text-white rounded-full text-sm mt-[1rem]"
+      </div>
+      <div class="flex gap-2">
+        <button class="py-2 px-8 bg-black text-white rounded-full text-sm"
           >Contact me</button
         >
+        <button
+          linkedin-button
+          class="p-3 bg-slate-900 text-blue-400 rounded-full my-auto"
+          ><LucideIcon icon={Linkedin} /></button
+        >
+        <button
+          instagram-button
+          class="p-3 bg-slate-900 text-pink-400 rounded-full my-auto"
+          ><LucideIcon icon={Instagram} /></button
+        >
+        <button
+          twitter-button
+          class="p-3 bg-slate-900 text-blue-500 rounded-full my-auto"
+          ><LucideIcon icon={Twitter} /></button
+        >
+        <button
+          youtube-button
+          class="p-3 bg-slate-900 text-red-400 rounded-full my-auto"
+          ><LucideIcon icon={Youtube} /></button
+        >
+        <button
+          twitch-button
+          class="p-3 bg-slate-900 text-purple-400 rounded-full my-auto"
+          ><LucideIcon icon={Twitch} /></button
+        >
+      </div>
     </div>
     <div class={`bg-[#FBFBFB] rounded-2xl overflow-hidden h-[550px]`}>
       <img src="/hero-me.png" class="object-cover h-full" />
     </div>
   </div>
 </main>
+
+<script>
+  import { openInNewTab } from "@utils/all";
+
+  const linkedinButton = document.querySelector("[linkedin-button]");
+  const instagramButton = document.querySelector("[instagram-button]");
+  const twitterButton = document.querySelector("[twitter-button]");
+  const youtubeButton = document.querySelector("[youtube-button]");
+  const twitchButton = document.querySelector("[twitch-button]");
+
+  linkedinButton?.addEventListener("click", () =>
+    openInNewTab("https://www.linkedin.com/in/rrios4/")
+  );
+  instagramButton?.addEventListener("click", () =>
+    openInNewTab("https://www.instagram.com/rriosoriginals/")
+  );
+  twitterButton?.addEventListener("click", () =>
+    openInNewTab("https://twitter.com/rriosoriginals")
+  );
+  youtubeButton?.addEventListener("click", () =>
+    openInNewTab("https://www.youtube.com/@rriosoriginals")
+  );
+  twitchButton?.addEventListener("click", () =>
+    openInNewTab("https://www.twitch.tv/roriginals")
+  );
+</script>

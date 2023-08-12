@@ -1,35 +1,25 @@
 ---
 import SectionHeader from "./section-header.astro";
 import ProjectCard from "./project-card.astro";
+import { ProjectInterface } from '../types/global-types'
 type Props = {
   projectData: any;
 };
 
-type ProjectInterface = {
-  title: string;
-  subtitle: string;
-  description: string;
-  start_date: string;
-  end_date: string;
-  img_url: string;
-  project_url: string;
-  featured: boolean;
-  badges: string[];
-  color: string;
-};
+
 
 const { projectData }: Props = Astro.props;
 ---
 
 <div class="py-4">
   <SectionHeader title="Projects" subtitle="A glance at my work" />
-  <div class="grid grid-flow-row grid-cols-1 lg:grid-cols-2 gap-6">
+  <ul class="grid grid-flow-row grid-cols-1 lg:grid-cols-2 gap-6">
     {
       projectData.map((item: ProjectInterface, index: number) => (
-        <>
+        <li>
           <ProjectCard item={item}/>
-        </>
+        </li>
       ))
     }
-  </div>
+  </ul>
 </div>
