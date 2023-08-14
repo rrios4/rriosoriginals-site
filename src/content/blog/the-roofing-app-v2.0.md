@@ -3,7 +3,7 @@ draft: false
 title: "The Roofing App v2.0 release update"
 snippet: "Formally launching v2.0 Rios Roofing company app + website today!"
 image: {
-    src: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?&fit=crop&w=430&h=240",
+    src: "https://kcasqwspojmlwabzxloe.supabase.co/storage/v1/object/public/nextjs-website-public/The%20Roofing%20App/roofingv2-website-poster%20Large.png",
     alt: "full stack web development"
 }
 publishDate: "2023-03-16 11:39"

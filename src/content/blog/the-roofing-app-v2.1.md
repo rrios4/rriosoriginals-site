@@ -3,7 +3,7 @@ draft: false
 title: "The Roofing App v2.1 release update"
 snippet: "Hello everyone 👋, I’m back and happy to announce the v2.1.0 of the app. During the development of this update I decided I wanted to give the app a brand to go by."
 image: {
-    src: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?&fit=crop&w=430&h=240",
+    src: "https://kcasqwspojmlwabzxloe.supabase.co/storage/v1/object/public/nextjs-website-public/The%20Roofing%20App/the-roofing-app-2.1-trailer-cover.png",
     alt: "full stack web development"
 }
 publishDate: "2023-07-09 11:39"

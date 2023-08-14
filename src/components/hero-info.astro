@@ -9,9 +9,9 @@ const borderStyle = "border-[4px] border-green-800 border-opacity-50";
 
 <main class="py-4 mx-auto w-full">
   <!-- <SectionHeader title="Intro" subtitle="Brief introduction to me"/> -->
-  <div class="grid grid-flow-row grid-cols-1 lg:grid-cols-2 w-full gap-6">
+  <div class="grid grid-flow-row grid-cols-1 lg:grid-cols-3 w-full gap-6">
     <div
-      class={`flex flex-col justify-between bg-slate-100 p-4 lg:p-10 rounded-2xl h-[550px]`}>
+      class={`lg:col-span-2 flex flex-col justify-between bg-slate-100 px-4 py-8  lg:p-10 rounded-2xl h-[450px] lg:h-[550px]`}>
       <div>
         <h1 class="text-[32px] sm:text-[40px] font-semibold">
           Hello, I’m Rogelio, a software engineer with 3 years of experience
@@ -21,39 +21,47 @@ const borderStyle = "border-[4px] border-green-800 border-opacity-50";
           user-centric, delightful, and human experiences.
         </p>
       </div>
-      <div class="flex gap-2">
-        <button class="py-2 px-8 bg-black text-white rounded-full text-sm"
-          >Contact me</button
-        >
-        <button
-          linkedin-button
-          class="p-3 bg-slate-900 text-blue-400 rounded-full my-auto"
-          ><LucideIcon icon={Linkedin} /></button
-        >
-        <button
-          instagram-button
-          class="p-3 bg-slate-900 text-pink-400 rounded-full my-auto"
-          ><LucideIcon icon={Instagram} /></button
-        >
-        <button
-          twitter-button
-          class="p-3 bg-slate-900 text-blue-500 rounded-full my-auto"
-          ><LucideIcon icon={Twitter} /></button
-        >
-        <button
-          youtube-button
-          class="p-3 bg-slate-900 text-red-400 rounded-full my-auto"
-          ><LucideIcon icon={Youtube} /></button
-        >
-        <button
-          twitch-button
-          class="p-3 bg-slate-900 text-purple-400 rounded-full my-auto"
-          ><LucideIcon icon={Twitch} /></button
-        >
+      <div class="flex flex-col lg:flex-row gap-4">
+        <div class="w-full">
+          <a href="mailto:rogeliorios348@gmail.com" target="_blank" class="w-full">
+            <button
+              class="py-4 px-8 bg-black text-white rounded-full text-sm h-full w-full"
+              >Contact me</button
+            >
+          </a>
+        </div>
+        <div class="flex gap-4 w-full justify-center md:justify-start">
+          <button
+            linkedin-button
+            class="p-3 bg-slate-900 text-blue-400 rounded-full my-auto"
+            ><LucideIcon icon={Linkedin} /></button
+          >
+          <button
+            instagram-button
+            class="p-3 bg-slate-900 text-pink-400 rounded-full my-auto"
+            ><LucideIcon icon={Instagram} /></button
+          >
+          <button
+            twitter-button
+            class="p-3 bg-slate-900 text-blue-500 rounded-full my-auto"
+            ><LucideIcon icon={Twitter} /></button
+          >
+          <button
+            youtube-button
+            class="p-3 bg-slate-900 text-red-400 rounded-full my-auto"
+            ><LucideIcon icon={Youtube} /></button
+          >
+          <button
+            twitch-button
+            class="p-3 bg-slate-900 text-purple-400 rounded-full my-auto"
+            ><LucideIcon icon={Twitch} /></button
+          >
+        </div>
       </div>
     </div>
-    <div class={`bg-[#FBFBFB] rounded-2xl overflow-hidden h-[550px]`}>
-      <img src="/hero-me.png" class="object-cover h-full" />
+    <div
+      class={`bg-[#FBFBFB] rounded-2xl overflow-hidden h-[400px] lg:h-[550px] row-start-1 lg:row-start-0`}>
+      <img src="/hero-me.png" class="object-cover h-full mx-auto rounded-2xl" />
     </div>
   </div>
 </main>
