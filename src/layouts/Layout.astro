@@ -11,7 +11,7 @@ export interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
+  "/opengraph-2.png",
   Astro.site
 ).toString();
 
@@ -36,8 +36,8 @@ const makeTitle = title
       description="Rogelio's personal porfolio to capture my latest work and blog posts."
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
+        creator: "@roriginals",
+        site: "@rriosoriginals",
         card: "summary_large_image",
       }}
       openGraph={{
