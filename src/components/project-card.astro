@@ -1,47 +1,52 @@
 ---
-import LucideIcon from './ui/icons/lucide-icon.astro';
+import LucideIcon from "./ui/icons/lucide-icon.astro";
 import { MoveUpRight } from "lucide";
 
 type Props = {
-    item: any;
-}
+  item: any;
+};
 
-const {item} = Astro.props
-
+const { item } = Astro.props;
 ---
-<div class={`w-full bg-slate-100 rounded-2xl h-[400px] sm:h-[500px] md:h-[600px] lg:h-[525px]`}>
-    <a href={item.url} target="_blank">
-      <div class="flex flex-col gap-8 transition ease-in-out duration-500 hover:scale-105 p-6 sm:p-10 h-full hover:cursor-pointer">
-        <div class="flex justify-between w-full">
-          <div>
-            <p class="text-[18px] text-slate-800 font-[500]">
-              {item.title}
-            </p>
-            <p class="text-[14px] text-slate-500">{item.subtitle}</p>
-            <p class="text-[14px] mt-2 text-slate-700">
-              {item.start_date} - {item.end_date}
-            </p>
-          </div>
-          <div class="bg-white rounded-full w-[50px] h-[50px] flex flex-col justify-center">
-            <LucideIcon
-              icon={MoveUpRight}
-              class="mx-auto w-[20px] h-[20px]"
-            />
-          </div>
+
+<div
+  class={`w-full bg-slate-100 rounded-2xl h-[400px] sm:h-[500px] md:h-[600px] lg:h-[525px] shadow-sm`}>
+  <a href={item.url} target="_blank">
+    <div
+      class="flex flex-col gap-8 transition ease-in-out duration-500 hover:scale-105 p-6 sm:p-10 h-full hover:cursor-pointer">
+      <div class="flex justify-between w-full">
+        <div>
+          {
+            item.text_header ? (
+              <p class={`font-[500] text-[18px] ${item.text_header}`}>
+                {item.title}
+              </p>
+            ) : (
+              <p class={`text-[18px] text-zinc-800 font-[500]`}>{item.title}</p>
+            )
+          }
+          {item.text_subheader ? <p class={`${item.text_subheader} text-[14px]`}>{item.subtitle}</p>: <p class="text-[14px] text-slate-500">{item.subtitle}</p>}
+          <p class="text-[14px] mt-2">
+            {item.start_date} - {item.end_date}
+          </p>
         </div>
-        <div class="flex gap-2">
-          {item.badges.map((item, index) => (
-            <div class="bg-black rounded-full text-orange-50 text-xs py-2 px-4">
-              {item}
-            </div>
-          ))}
-        </div>
-        <div class="mt-auto rounded-2xl overflow-hidden">
-          <img
-            src={item.img_url}
-            class="w-[1000px] mt-auto rounded-2xl"
-          />
+        <div
+          class="bg-white rounded-full w-[50px] h-[50px] flex flex-col justify-center">
+          <LucideIcon icon={MoveUpRight} class="mx-auto w-[20px] h-[20px]" />
         </div>
       </div>
-    </a>
-  </div>
+      <div class="flex gap-2">
+        {
+          item.badges.map((item, index) => (
+            <div class="bg-black rounded-full text-green-50 text-xs py-2 px-4">
+              {item}
+            </div>
+          ))
+        }
+      </div>
+      <div class="mt-auto rounded-2xl overflow-hidden">
+        <img src={item.img_url} class="w-[1000px] mt-auto rounded-2xl" />
+      </div>
+    </div>
+  </a>
+</div>

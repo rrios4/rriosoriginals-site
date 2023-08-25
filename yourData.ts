@@ -10,7 +10,10 @@ export const projectItems = [
         url: "https://github.com/rrios4/roofing-webapp",
         featured: true,
         badges: ["React.js", "Chakra UI", "Supabase"],
-        color: "bg-blue-500"
+        color: "",
+        gradient: "",
+        text_header: "",
+        text_subheader: ""
       },
       {
         title: "UH Survey App",

@@ -7,24 +7,30 @@ const {} = Astro.props;
 const borderStyle = "border-[4px] border-green-800 border-opacity-50";
 ---
 
-<main class="py-4 mx-auto w-full">
+<main class="py-4 mx-auto w-full mb-8">
   <!-- <SectionHeader title="Intro" subtitle="Brief introduction to me"/> -->
-  <div class="grid grid-flow-row grid-cols-1 lg:grid-cols-3 w-full gap-6">
+  <div class="grid grid-flow-row grid-cols-1 lg:grid-cols-5 w-full gap-6">
     <div
-      class={`lg:col-span-2 flex flex-col justify-between bg-slate-100 px-4 py-8  lg:p-10 rounded-2xl h-full lg:h-[550px]`}>
+      class={`lg:col-span-3 flex flex-col justify-between bg-gradient-to-b from-cyan-500 to-blue-500 text-white px-4 py-8  lg:p-10 rounded-2xl h-full lg:h-[550px] shadow-sm`}>
       <div>
         <h1 class="text-[32px] sm:text-[40px] font-semibold">
           Hello, I’m Rogelio, a software engineer with 3 years of experience
         </h1>
         <p class="mt-10 mb-4">
-          I care a lot about design to create something that makes an impact in peoples life, that is meaningfull and delightful to use. Through code I can create anything I set my mind too and hopefully make a change to the people around me.
+          I care a lot about design to create something that makes an impact in
+          peoples life, that is meaningfull and delightful to use. Through code
+          I can create anything I set my mind too and hopefully make a change to
+          the people around me.
         </p>
       </div>
       <div class="flex flex-col lg:flex-row gap-4">
         <div class="w-full">
-          <a href="mailto:rogeliorios348@gmail.com" target="_blank" class="w-full">
+          <a
+            href="mailto:rogeliorios348@gmail.com"
+            target="_blank"
+            class="w-full">
             <button
-              class="py-4 px-8 bg-black text-white rounded-full text-sm h-full w-full"
+              class="py-4 px-8 bg-black text-white rounded-full text-sm h-full w-full transition ease-in-out hover:scale-95"
               >Contact me</button
             >
           </a>
@@ -32,35 +38,42 @@ const borderStyle = "border-[4px] border-green-800 border-opacity-50";
         <div class="flex gap-4 w-full justify-center lg:justify-start">
           <button
             linkedin-button
-            class="p-3 bg-slate-900 text-blue-400 rounded-full my-auto"
+            class="p-3 bg-slate-800 text-blue-400 rounded-full my-auto transition ease-in-out hover:scale-95"
             ><LucideIcon icon={Linkedin} /></button
           >
           <button
             instagram-button
-            class="p-3 bg-slate-900 text-pink-400 rounded-full my-auto"
+            class="p-3 bg-slate-800 text-pink-400 rounded-full my-auto transition ease-in-out hover:scale-95"
             ><LucideIcon icon={Instagram} /></button
           >
           <button
             twitter-button
-            class="p-3 bg-slate-900 text-blue-500 rounded-full my-auto"
+            class="p-3 bg-slate-800 text-blue-500 rounded-full my-auto transition ease-in-out hover:scale-95"
             ><LucideIcon icon={Twitter} /></button
           >
           <button
             youtube-button
-            class="p-3 bg-slate-900 text-red-400 rounded-full my-auto"
+            class="p-3 bg-slate-800 text-red-400 rounded-full my-auto transition ease-in-out hover:scale-95"
             ><LucideIcon icon={Youtube} /></button
           >
           <button
             twitch-button
-            class="p-3 bg-slate-900 text-purple-400 rounded-full my-auto"
+            class="p-3 bg-slate-800 text-purple-400 rounded-full my-auto transition ease-in-out hover:scale-95"
             ><LucideIcon icon={Twitch} /></button
           >
         </div>
       </div>
     </div>
     <div
-      class={`bg-[#FBFBFB] rounded-2xl overflow-hidden h-[300px] sm:h-[425px] lg:h-[550px] row-start-1 lg:row-start-0`}>
-      <img src="/hero-me.png" class="object-cover h-full mx-auto rounded-2xl" />
+      class={`bg-gradient-to-b from-cyan-500 to-blue-500 rounded-2xl overflow-hidden h-[300px] sm:h-[425px] lg:h-[550px] row-start-1 lg:row-start-0 shadow-sm lg:col-span-2`}>
+      <div class="flex flex-col justify-center w-full h-full">
+        <div class="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] border-2 rounded-full overflow-hidden mx-auto my-auto bg-zinc-800">
+          <img
+            src="https://kcasqwspojmlwabzxloe.supabase.co/storage/v1/object/public/nextjs-website-public/The%20Roofing%20App/my-memoji-transformed.png"
+            class="w-full h-full mx-auto rounded-2xl p-2"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </main>
